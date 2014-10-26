@@ -1,34 +1,14 @@
 $(document).ready(function() {
     $("#mapContainer").cytoscape({
         // Create nodes and edges
-        elements: {
-            nodes: [
-                {
-                    data: {
-                        id: "1"
-                    }
-                },
-                {
-                    data: {
-                        id: "2"
-                    }
-                }
-            ],
-            edges: [
-                {
-                    data: {
-                        id: "1->2",
-                        source: "1",
-                        target: "2"
-                    }
-                }
-            ]
-        },
+        elements: window.ticketToRideMap,
 
         // Set the layout
         layout: {
-            name: "grid",
-            padding: 5
+            name: "cose",
+            animate: true,
+            refresh: 4,
+            fit: true
         },
 
         // Set the style
