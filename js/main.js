@@ -20,6 +20,11 @@ $(document).ready(function() {
             .selector("node:selected")
                 .css({
                     "background-color": "#444444"
+                })
+            .selector("edge")
+                .css({
+                    "line-color": "#444444",
+                    "width": 4
                 }),
 
         // Graph is ready
