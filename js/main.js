@@ -23,8 +23,17 @@ $(document).ready(function() {
                 })
             .selector("edge")
                 .css({
-                    "line-color": "#444444",
-                    "width": 4
+                    "line-color": "data(color)",
+                    "width": 4,
+                    "content": "data(length)"
+                })
+            .selector("edge[bridge>=1]")
+                .css({
+                    "line-style": "dashed"
+                })
+            .selector("edge[tunnel='true']")
+                .css({
+                    "line-style": "dotted"
                 }),
 
         // Graph is ready
@@ -36,6 +45,8 @@ $(document).ready(function() {
             cy.userPanningEnabled(true);
             cy.boxSelectionEnabled(false);
         }
+    }).css({
+        "background": "brown"
     });
 });
 
