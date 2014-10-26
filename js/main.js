@@ -7,6 +7,7 @@ $(document).ready(function() {
         layout: {
             name: "cose",
             animate: true,
+            nodeRepulsion: 1000000,
             refresh: 4,
             fit: true
         },
